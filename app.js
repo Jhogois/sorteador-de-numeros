@@ -17,10 +17,19 @@ function sortear() {
     let quantidade = document.getElementById('quantidade').value
     let numeroMinimo = document.getElementById('de').value
     let numeroMaximo = document.getElementById('ate').value
-
+    
     // Validar entrada
-    if (isNaN(quantidade) || isNaN(numeroMinimo) || isNaN(numeroMaximo) || quantidade <= 0 || numeroMinimo > numeroMaximo) {
-        alert('Por favor, insira valores válidos.')
+    if (quantidade <= 0) {
+        alert('A quantidade de números deve ser maior que 0.')
+        return
+    } else if (numeroMinimo <= 0) {
+        alert('O campo "Do número" deve conter um valor maior que 0')
+        return
+    } else if (numeroMaximo <= 0) {
+        alert('O campo "Até o número" deve conter um valor maior que 0')
+        return
+    } else if (numeroMinimo > numeroMaximo) {
+        alert('O Campo "Do número" deve conter um valor menor do que o campo "Até o número".')
         return
     }
 
