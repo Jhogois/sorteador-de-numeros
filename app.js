@@ -31,6 +31,9 @@ function sortear() {
     } else if (numeroMinimo > numeroMaximo) {
         alert('O Campo "Do número" deve conter um valor menor do que o campo "Até o número".')
         return
+    } else if (quantidade > numeroMaximo - numeroMinimo) {
+        alert('A quantidade de números deverá ser um valor menor ou igual ao intervalo informado no campo "Do número" até o campo "Até o número". Verifique!')
+        return
     }
 
     // Insere os resultados na lista
