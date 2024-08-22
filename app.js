@@ -14,9 +14,9 @@ mensagemInicial()
 
 // Sorteia os números
 function sortear() {
-    let quantidade = document.getElementById('quantidade').value
-    let numeroMinimo = document.getElementById('de').value
-    let numeroMaximo = document.getElementById('ate').value
+    let quantidade = parseInt(document.getElementById('quantidade').value, 10)
+    let numeroMinimo = parseInt(document.getElementById('de').value, 10)
+    let numeroMaximo = parseInt(document.getElementById('ate').value, 10)
     
     // Validar entrada
     if (quantidade <= 0) {
