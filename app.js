@@ -19,7 +19,7 @@ function sortear() {
     let numeroMaximo = parseInt(document.getElementById('ate').value, 10)
     
     // Validar entrada
-    if (quantidade <= 0) {
+    if (quantidade <= 0 || String(quantidade) === 'NaN') {
         alert('A quantidade de números deve ser maior que 0.')
         return
     } else if (numeroMinimo <= 0) {
